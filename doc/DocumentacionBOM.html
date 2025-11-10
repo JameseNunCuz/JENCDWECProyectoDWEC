@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Documentaci&oacute;n BOM</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="documentación-bom">Documentación BOM</h1>
+<h2 id="window"><strong>Window</strong></h2>
+<p>El objeto window representa la ventana del navegador en la que se está ejecutando actualmente la aplicación.</p>
+<p><strong>---- Propiedades principales ----</strong></p>
+<p><strong>closed</strong> - Devuelve si un buleano indicando si la ventana esta cerrada</p>
+<p><strong>localStorage</strong> - Devuelve los pares clave/valor almacenados en el navegador sin fecha de expiración</p>
+<p><strong>name</strong> - Devuelve el nombre de la ventana actual</p>
+<p><strong>opener</strong> - Devuelve una referencia a la ventana que creo la ventana sobre la que se use este metodo</p>
+<p><strong>parent</strong> - Devuelve un objeto de el padre inmediato de la ventana actual (No confundir con top)</p>
+<p><strong>top</strong> - Devuelve un objeto de la ventana mas superior en la jerarquia de ventanas de la ventana actual (No confundir con parent)</p>
+<p><strong>self</strong> - Devuelve un objeto con la ventana actual</p>
+<p><strong>sessionStorage</strong> - Permite almacenar y recoger  pares de clave/valor en el alamacenamiento del navegador <strong>.setItem(nombre,valor)</strong> para almacenar y <strong>.getItem(nombre)</strong> para leer</p>
+<p><strong>console</strong> - Devuelve el objeto consola de la venatana</p>
+<p><strong>document</strong> - Devuelve el objeto documento de la ventana</p>
+<p><strong>history</strong> - Devuelve el objeto historia de la ventana</p>
+<p><strong>location</strong> - Devuelve el objeto localización de la ventana</p>
+<p><strong>screen</strong> - Devuelve el objeto pantalla de la ventana</p>
+<p><strong>navigator</strong> - Devuelve el objeto navegador de la ventana</p>
+<p> </p>
+<p><strong>---- Métodos principales ----</strong></p>
+<p><strong>addEventListener()</strong> - Establece un listener para un evento</p>
+<p><strong>removeEventListener()</strong> - Borra un listener para un evento</p>
+<p><strong>blur()</strong> - Quieta el foco de la ventana</p>
+<p><strong>focus()</strong> - Pone el foco en la ventana</p>
+<p><strong>close()</strong> - Cierra la ventana</p>
+<p><strong>Open()</strong> - Abre lo introducido en una ventana nueva</p>
+<p><strong>print()</strong> - Imprime el contenido actual de la ventana</p>
+<p><strong>moveBy()</strong> - Mueve la ventana en una cantidad relativa a la posicion actual</p>
+<p><strong>moveTo()</strong> - Mueve la ventana a una posicion absoluta</p>
+<p><strong>getComputedStyle()</strong> - Devuelve los estilos css del elemento especificado</p>
+<p><strong>setInterval()</strong> - Ejecuta la funcion indicada cada cierto intervalo en milisegundos</p>
+<p><strong>stop()</strong> - Detiene la ejecucion de la ventana</p>
+<p><strong>setTimeout()</strong> - Llama a la funcion especificada despues de cierto intervalo en milisegundos</p>
+<p><strong>alert()</strong> - Muestra un alert box con un mensaje y un boton de ok</p>
+<p><strong>confirm()</strong> - Muestra una ventana de confirmacion con un texto y un boton de confirmar o cancelar</p>
+<p><strong>prompt()</strong> - Muestra una ventana con un texto y una caja para el usuario introducir información, que es lo que debuelve</p>
+<p> </p>
+<h2 id="history"><strong>History</strong></h2>
+<p>El objeto history contiene las urls visitadas por el usuario en la ventana del navegador, es un metodo del objeto window y se puede acceder con <strong>window.history</strong> o con <strong>history</strong></p>
+<p><strong>---- Métodos y propiedades principales ----</strong></p>
+<p><strong>length</strong> - Devuelve el numero de urls que han sido visitadas en la ventana actual del navegador incluyendo la actual</p>
+<p><strong>back()</strong> - Carga la url anterior en la lista del historial si es que hay una url anterior</p>
+<p><strong>forward()</strong> - Carga la url siguiente en la lista del historial si es que hay una url siguiente</p>
+<p><strong>go()</strong> - Carga una url de la lista del historial, solo funcioan si la especificada esta en el historial, 0 recarga la pagina, 1 es lo mismo que forward(), -1 es igual que back(), 2 iria 2 hacia alante, -2 iria 2 hacia atras, etc</p>
+<p> </p>
+<h2 id="location"><strong>Location</strong></h2>
+<p>El objeto location contiene información de la url actual, es un metodo del objeto window y se puede aceder con <strong>window.location</strong> o <strong>location</strong></p>
+<p><strong>---- Propiedades principales ----</strong></p>
+<p><strong>protocol</strong> - Devuelve o cambia el protocolo de la url</p>
+<p><strong>hostname</strong> - Devuelve o cambia el hostname de la url</p>
+<p><strong>port</strong> - Devuelve o cambia el puerto de la url</p>
+<p><strong>pathname</strong> - Devuelve o cambia el directorio de la url (/algo/algomas/)</p>
+<p><strong>search</strong> - Devuelve o cambia la parte de la url que viene despues del ? (El ? lo devuelve tambien, para cambiarla no hace falta ponerlo)</p>
+<p><strong>hash</strong> - Devuelve o cambia la parte del hash de la url (la parte despues de #, el # en si no lo cambia)</p>
+<p> </p>
+<p><strong>host</strong> - Devuelve o permite cambiar el host y puerto de la url (Si no viene el puerto en la url o es 80 o 443 el puerto esta vacio)</p>
+<p><strong>origin</strong> - Devuelve el protocolo, hostname y puerto de la url (Es lectura solo)</p>
+<p><strong>href</strong> - Devuelve o cambia la url entera</p>
+<p> </p>
+<p><strong>---- Métodos principales ----</strong></p>
+<p><strong>asign()</strong> - Carga un documento nuevo en la ventana actual, eprmite volver atras al documento previo</p>
+<p><strong>reload()</strong> - Recarga la ventana actual, hace lo mismo que el boton del navegador</p>
+<p><strong>replace()</strong> - Carga un documento nuevo en la ventana actual, pero no permite volver atras</p>
+<p> </p>
+<h2 id="screen"><strong>Screen</strong></h2>
+<p>El objeto Screen contiene información sobre la pantalla fisica del usuario, es un metodo del objeto window y se puede acceder con <strong>window.screen</strong> o <strong>screen</strong></p>
+<p><strong>---- Propiedades principales ----</strong></p>
+<p><strong>availHeight</strong> - Devuelve la altura disponible en la pantalla sin incluir la barra de tareas</p>
+<p><strong>availWidth</strong> - Devuelve la anchura disponible en la pantalla sin incluir la barra de tareas</p>
+<p><strong>height</strong> - Devuelve la altura total de la pantalla</p>
+<p><strong>width</strong> - Devuelve la anchura total de la pantalla</p>
+<p><strong>colorDepth</strong> - Devuelve la profundidad de color de la pantalla en bits por pixel, devuelve un int</p>
+<p> </p>
+<h2 id="navigator"><strong>Navigator</strong></h2>
+<p>El objeto navigator contiene informacion sobre el navegador, es un metodo del objeto window y se puede acceder con <strong>window.navigator</strong> o <strong>navigator</strong></p>
+<p><strong>---- Propiedades principales ----</strong></p>
+<p><strong>cookieEnabled</strong> - Devuelve un booleano indicando si las cookies estan activadas</p>
+<p><strong>geolocation</strong> - Devuelve un objeto de geolocalizacion del usuario</p>
+<p><strong>language</strong> - Devuelve el lenguaje del navegador en formato es-ES</p>
+<p><strong>onLine</strong> - Devuelve un booleano indicando si el navegador esta conectado a internet</p>
+<p><strong>userAgent</strong> - Devuelve una cadena con la informacion del navegador</p>
+<p> </p>
+<h2 id="console"><strong>Console</strong></h2>
+<p>El objeto console da acceso a la consola del navegador, es un metodo del objeto window y se puede acceder con <strong>window.console</strong> o <strong>console</strong></p>
+<p><strong>---- Métodos principales ----</strong></p>
+<p><strong>log()</strong> - Saca un mensaje en la consola</p>
+<p><strong>warn()</strong> - Saca un aviso en la consola</p>
+<p><strong>error()</strong> - Muestra un mensaje de error en la consola</p>
+<p><strong>clear()</strong> - Limpia la consola</p>
+<p> </p>
+<p><strong>group()</strong> - Crea un grupo de mensajes en la consola, todos los mensajes nuevos se muestran dentro de ese grupo</p>
+<p><strong>groupCollapsed()</strong> - Crea un grupo de mensajes en la consola pero este esta colapsado.</p>
+<p><strong>groupEnd()</strong> - Cierra un grupo de mensajes en la consola</p>
+<p> </p>
+<p><strong>time()</strong> - Inicia un cronometro</p>
+<p><strong>timeEnd()</strong> - Finaliza el cronomtro y muestra el tiempo transcurrido</p>
+<p> </p>
+<p><strong>assert()</strong> - Escribe un mensaje de error en la consola si la condicion no se cumple</p>
+<p><strong>table()</strong> - Imprime una tabla en la consola con los datos introducidos</p>
+<p><strong>count()</strong> - Saca por consola en numero de veces que ha sido llamado el metodo con el nombre que se le pase</p>
+<p><strong>trace()</strong> - Muestra la traza de como se ha llegado a la ejecucion de este codigo</p>
+<p> </p>
+<h2 id="document"><strong>Document</strong></h2>
+<p>Cuando un objecto html se carga en el navegador se convierte en un objeto documento, este es el nodo raiz del documento html. Ws un metodo del objeto window y se puede acceder con <strong>window.document</strong> o <strong>document</strong></p>
+<p><strong>---- Métodos y propiedades principales ----</strong></p>
+<p><strong>getElementById()</strong> - Devuelve el elemento con la id especificada</p>
+<p><strong>getElementsByClassName()</strong> - Devuelve todos los elementos que tengan la clase especificada</p>
+<p><strong>getElementsByName()</strong> - Devuelve todos los elementos con el nombre especificado</p>
+<p><strong>getElementsByTagName()</strong> - Devuelve todos los elementos del tag especificado</p>
+<p> </p>
+<p><strong>createElement()</strong> - Crea un elemento del tipo introducido</p>
+<p><strong>createAttribute()</strong> - Crea un atributo y lo devuelve como un objeto atributo</p>
+<p><strong>addEventListener()</strong> - Añade un listener a un elemento</p>
+<p><strong>createEvent()</strong> - Crea un evento con el nombre introducido</p>
+<p> </p>
+<p><strong>title</strong> - Devuelve o cambia el titulo del documento</p>
+<p><strong>head</strong> - Devuelve el head del documento, si no tiene crea uno vacio y lo devuelve</p>
+<p><strong>body</strong> - Devuelve o escribe el elemento body de un documento</p>
+<p><strong>forms</strong> - Devuelve todos los formularios de un documento</p>
+<p><strong>images</strong> - Devuelve todos los elemento img del documento</p>
+<p><strong>links</strong> - Devuelve todos los links del documento</p>
+<p><strong>scripts</strong> - Devuelve todos los scripts de la etiqueta script del documento</p>
+<p> </p>
+<p><strong>open()</strong> - Abre un documento para escribir en el, borra</p>
+<p><strong>write()</strong> - Escribe directamente en un documento html abierto</p>
+<p><strong>close()</strong> - Cierra una ventana abierta con open()</p>
+<p> </p>
+<p><strong>hasFocus()</strong> - Devuelve un buleano indicando si el elemento tiene el focus</p>
+<p><strong>activeElement</strong> - Devuelve el elemento con el focus del documento, es lectura solo</p>
+<p><strong>cookie</strong> - Devuelve las cookies del documento</p>
+<p><strong>readyState</strong> - Devuelve un string indicando el estado de carga del documento</p>
+<p><strong>normalize()</strong> - Normaliza el documento, es decir borra nodos de texto vacios y une adyacentes</p>
+
+            
+            
+        </body>
+        </html>
