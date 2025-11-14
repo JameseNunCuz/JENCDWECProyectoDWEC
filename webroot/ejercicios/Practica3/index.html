@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="scrypt.js"></script>
-    <title>Ejercicio sopa de letras</title>
+    <title>Sopa de letras</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div id="main">
-        <h2 id="palabras">Sopa de letras</h2>
-        <div id="tablero"></div>
-    </div>
+    <header>
+        <table>
+            <tr>
+                <td>
+                    <h2>Desarrollo web en entorno cliente</h2>
+                </td>
+                <td>
+                    <h1>Sopa de letras</h1>
+                </td>
+                <td>
+                    <button class="active" onclick="location.href = '../../../'">
+                        <h5>Volver</h5>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <main>
+
+        <div id="contenedor">
+            <div id="contenedorPalabras">
+                <h2>----------- Palabras -----------</h2>
+                <h2 id="palabras"></h2>
+            </div>
+            <div id="tablero"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>James Edward Nuñez Cuzcano</h2>
+        <div>
+            <button class="active" onclick="window.open('https://github.com/JameseNunCuz')"><img
+                    src="../../../webresources/github.png" alt="Github"></button>
+            <button class="active" onclick="location.href='../../../../'"><img src="../../../webresources/home.png"
+                    alt="Home"></button>
+        </div>
+    </footer>
 </body>
 
 </html>

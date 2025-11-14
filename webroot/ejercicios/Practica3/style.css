@@ -1,28 +1,44 @@
-body {
-    width: 100%;
-    max-width: 100%;
-}
+main {
+    #contenedor{
+        display: flex;
+        flex-direction: row;
+    }
 
-#main {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
+    #contenedorPalabras{
+        width:15vw;
+        position:absolute;
+        left:15%;
+        transform: translate(-50%,0%);
+        h2{
+            text-align: center;
+        }
+    }
 
-button {
-    border: 2px solid black;
-    font-size: 2em;
-    text-align: center;
-    height: 2em;
-    width: 2em;
-}
+    table{
+        margin:0px;
+        padding:0px;
+        td,tr,button{
+            padding: 0px;
+        }
 
-button:hover {
-    background-color: lightblue
-}
+        button{
+            border-radius: 0px;
+            background-color: lightgray;
+            color:black;
+        }
+    }
 
-#tablero {
-    max-height: 90vh;
-    overflow-y: auto;
+    button {
+        border: 2px solid black;
+        font-size: 2em;
+        text-align: center;
+        height: 2em;
+        width: 2em;
+    }
+
+    button:hover {
+        background-color: lightblue
+    }
+
+
 }

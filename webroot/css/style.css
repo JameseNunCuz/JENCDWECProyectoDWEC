@@ -27,6 +27,10 @@ header {
     background-color: #2F4858;
     color: white;
     padding: 2em;
+
+    td {
+        width: 33vw;
+    }
 }
 
 main {
