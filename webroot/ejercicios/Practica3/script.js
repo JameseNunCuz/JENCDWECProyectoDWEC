@@ -10,12 +10,14 @@ function crearSopa(nPalabras) {
     let tablero = generarTablero(arrayPalabras);
 
     //Sacar palabras
-    let cadenaPalabras = "";
-    for (let i = 0; i < arrayPalabras.length; i++) {
-        cadenaPalabras += arrayPalabras[i] + ", ";
-    }
     let palabras = document.getElementById("palabras");
-    palabras.textContent = cadenaPalabras;
+    let ul = document.createElement("ul");
+    for (let i = 0; i < arrayPalabras.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = arrayPalabras[i];
+        ul.appendChild(li);
+    }
+    palabras.appendChild(ul);
 
     //Sacar por pantalla tablero
     let div = document.getElementById("tablero");
@@ -314,10 +316,37 @@ function rellenarTablero(tablero) {
     return tablero;
 }
 
+function checkTime(i) {
+    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+    return i;
+}
+
+function updateClock() {
+    let now = new Date();
+    let hours = String(now.getHours());
+    let minutes = String(now.getMinutes());
+    let seconds = String(now.getSeconds());
+    hours = checkTime(hours);
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('clock').textContent = timeString;
+}
+
+function checkCookies() {
+    let response = null;
+    if (!navigator.cookieEnabled) {
+        alert("Las cookies estan deshabilitadas, sin estas no se guardaran ni mostraran las puntuaciones.");
+        response = false;
+    }
+    return response;
+}
 
 let maxPalabras = 6;
 
 window.addEventListener("load", (event) => {
+    checkCookies();
+    var clockProcess = setInterval(() => updateClock(), 1000);
     let nPalabras = prompt("Numero de palabras que quieres que tenga la sopa de letras (max: 6): ");
     if (nPalabras > maxPalabras || nPalabras < 1 || isNaN(nPalabras)) { nPalabras = maxPalabras; }
     crearSopa(nPalabras);
